@@ -16,6 +16,7 @@ Usage: python scripts/cache_detections.py coco val
 
 from __future__ import annotations
 
+import os
 import sys
 import time
 from pathlib import Path
@@ -28,6 +29,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from uavtrack.visdrone import mot_split  # noqa: E402
 
 IMGSZ = 960
+DEVICE = os.environ.get("DEVICE", "0")  # "cpu" lets detection run while the GPU is training
 COCO_VEHICLES = [2, 5, 7]  # car, bus, truck
 WEIGHTS = {"coco": "yolov8n.pt", "visdrone": str(ROOT / "models/vehicle_v8n.pt")}
 
@@ -49,8 +51,9 @@ def main(detector: str, split: str):
         rows = []
         t0 = time.perf_counter()
         for k, f in enumerate(s.frames, start=1):
+            # max_det raised from YOLO's default 300: the densest VisDrone images hold 349 vehicles
             r = model.predict(str(f), imgsz=IMGSZ, conf=0.05, iou=0.6, classes=classes, agnostic_nms=True,
-                              device=0, verbose=False, half=True)[0]
+                              max_det=1000, device=DEVICE, verbose=False, half=DEVICE != "cpu")[0]
             b = r.boxes
             if len(b):
                 xyxy = b.xyxy.cpu().numpy()
@@ -61,7 +64,7 @@ def main(detector: str, split: str):
         dets = np.vstack(rows) if rows else np.zeros((0, 6))
         np.save(out_dir / f"{s.name}.npy", dets.astype(np.float32))
         print(f"{s.name}: {len(s.frames)} frames, {len(dets)} boxes")
-    print(f"{detector}/{split}: {n_total} frames, {n_total / t_total:.1f} frames/s end to end (GPU, fp16, {IMGSZ} px)")
+    print(f"{detector}/{split}: {n_total} frames, {n_total / t_total:.1f} frames/s end to end (device {DEVICE}, {IMGSZ} px)")
 
 
 if __name__ == "__main__":
