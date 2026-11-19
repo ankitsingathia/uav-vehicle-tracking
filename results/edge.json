@@ -1,0 +1,24 @@
+{
+  "cpu": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "imgsz": 960,
+  "tracker": "sort+cmc",
+  "models": {
+    "fp32": {
+      "file_mb": 12.38,
+      "latency_ms_1_thread": 244.4,
+      "latency_ms_all_threads": 93.7,
+      "mota": 0.5047907461649208,
+      "idf1": 0.6824623375172779,
+      "count_mape_pct_30f": 12.512709243944112
+    },
+    "int8": {
+      "file_mb": 6.13,
+      "latency_ms_1_thread": 176.2,
+      "latency_ms_all_threads": 73.4,
+      "mota": 0.5005212728987738,
+      "idf1": 0.6812190056372653,
+      "count_mape_pct_30f": 15.21080596772775
+    }
+  },
+  "timing": "median of 3 alternating rounds x 100 frames, 960 px input, ONNX Runtime CPU"
+}

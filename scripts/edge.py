@@ -6,7 +6,10 @@ what matters downstream: the same tracker run on each model's detections
 over the validation split.
 
 int8: ONNX Runtime static quantisation (QDQ, per-channel weights), calibrated
-on 64 training images, never on the validation sequences.
+on 64 training images, never on the validation sequences. The detection head
+(the 66 nodes under /model.22/) stays in float: its output tensor holds box
+coordinates (0-960 px) and class scores (0-1) side by side, and one int8 scale
+for both crushed every score to the same value (MOTA 0.0 when quantised whole).
 
 Usage: python scripts/edge.py   (needs models/vehicle_v8n.pt; writes results/edge.json)
 """
@@ -73,9 +76,12 @@ def quantise(fp32: Path) -> Path:
             p = next(self.it, None)
             return None if p is None else {"images": letterbox(cv2.imread(str(p)))}
 
+    import onnx
+
+    head = [n.name for n in onnx.load(str(fp32)).graph.node if "/model.22/" in n.name]
     dst = ROOT / "models/vehicle_v8n_int8.onnx"
     quantize_static(str(fp32), str(dst), Reader(), quant_format=QuantFormat.QDQ, per_channel=True,
-                    weight_type=QuantType.QInt8, activation_type=QuantType.QUInt8)
+                    weight_type=QuantType.QInt8, activation_type=QuantType.QUInt8, nodes_to_exclude=head)
     return dst
 
 
