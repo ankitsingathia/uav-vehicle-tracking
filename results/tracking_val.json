@@ -1,0 +1,1778 @@
+{
+  "split": "val",
+  "sequences": 7,
+  "frames": 2846,
+  "gt_vehicle_boxes": 40286,
+  "results": {
+    "coco/iou": {
+      "overall": {
+        "mota": 0.19053765576130666,
+        "idf1": 0.23366628459145244,
+        "num_switches": 334.0,
+        "num_false_positives": 280.0,
+        "num_misses": 31996.0,
+        "precision": 0.9673278879813302,
+        "recall": 0.20577868242069206,
+        "mostly_tracked": 28.0,
+        "mostly_lost": 176.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 111.61495297522774,
+        "count_bias_pct": 99.11495297522774,
+        "tracker_fps": 13167.25748192073
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": NaN,
+          "idf1": NaN,
+          "num_switches": 0.0,
+          "num_false_positives": 0.0,
+          "num_misses": 0.0,
+          "precision": NaN,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.21525885558583102,
+          "idf1": 0.2551633221034129,
+          "num_switches": 83.0,
+          "num_false_positives": 27.0,
+          "num_misses": 4210.0,
+          "precision": 0.9795763993948563,
+          "recall": 0.23524069028156222,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 16.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.42662889518413594,
+          "idf1": 0.4847664184157075,
+          "num_switches": 57.0,
+          "num_false_positives": 105.0,
+          "num_misses": 3886.0,
+          "precision": 0.9679780420860018,
+          "recall": 0.44957507082152975,
+          "mostly_tracked": 17.0,
+          "mostly_lost": 18.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.10052586523174756,
+          "idf1": 0.12025660541480918,
+          "num_switches": 54.0,
+          "num_false_positives": 72.0,
+          "num_misses": 7229.0,
+          "precision": 0.9294117647058824,
+          "recall": 0.11593493946435122,
+          "mostly_tracked": 1.0,
+          "mostly_lost": 50.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.08751353302057019,
+          "idf1": 0.0919332291752323,
+          "num_switches": 71.0,
+          "num_false_positives": 18.0,
+          "num_misses": 10025.0,
+          "precision": 0.9832869080779945,
+          "recall": 0.09554312522555035,
+          "mostly_tracked": 1.0,
+          "mostly_lost": 39.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.09266666666666667,
+          "idf1": 0.13635452175656707,
+          "num_switches": 14.0,
+          "num_false_positives": 28.0,
+          "num_misses": 4041.0,
+          "precision": 0.9425051334702259,
+          "recall": 0.102,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 43.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.3207070707070707,
+          "idf1": 0.3289055191768008,
+          "num_switches": 55.0,
+          "num_false_positives": 30.0,
+          "num_misses": 2605.0,
+          "precision": 0.9783393501805054,
+          "recall": 0.3421717171717172,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 10.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 0,
+          "error_pct": 0.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 103,
+          "error_pct": 267.85714285714283
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 86,
+          "error_pct": 95.45454545454545
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 94,
+          "error_pct": 59.32203389830509
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 85,
+          "error_pct": 93.18181818181819
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 27,
+          "error_pct": -43.75
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 74,
+          "error_pct": 221.7391304347826
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 111.61495297522774,
+          "count_bias_pct": 99.11495297522774
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 46.73765215203788,
+          "count_bias_pct": 11.389314049462486
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 36.10534704268256,
+          "count_bias_pct": -22.27135494782089
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 48.57599216413302,
+          "count_bias_pct": -48.57599216413302
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 56.21707046857063,
+          "count_bias_pct": -56.21707046857063
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 64.63427284895333,
+          "count_bias_pct": -64.63427284895333
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 70.91658144466335,
+          "count_bias_pct": -70.91658144466335
+        }
+      ]
+    },
+    "coco/sort": {
+      "overall": {
+        "mota": 0.2218884972447004,
+        "idf1": 0.3153210679650397,
+        "num_switches": 121.0,
+        "num_false_positives": 384.0,
+        "num_misses": 30842.0,
+        "precision": 0.960927960927961,
+        "recall": 0.23442386933426004,
+        "mostly_tracked": 32.0,
+        "mostly_lost": 167.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 39.933333151040266,
+        "count_bias_pct": 9.84675306446019,
+        "tracker_fps": 5004.702239300668
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": NaN,
+          "idf1": NaN,
+          "num_switches": 0.0,
+          "num_false_positives": 0.0,
+          "num_misses": 0.0,
+          "precision": NaN,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.267211625794732,
+          "idf1": 0.3647887323943662,
+          "num_switches": 26.0,
+          "num_false_positives": 49.0,
+          "num_misses": 3959.0,
+          "precision": 0.9692789968652038,
+          "recall": 0.2808356039963669,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 14.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.45453257790368273,
+          "idf1": 0.5772373171195135,
+          "num_switches": 31.0,
+          "num_false_positives": 113.0,
+          "num_misses": 3707.0,
+          "precision": 0.967397576457011,
+          "recall": 0.47492917847025495,
+          "mostly_tracked": 18.0,
+          "mostly_lost": 16.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.12730830377889202,
+          "idf1": 0.1932897235703735,
+          "num_switches": 26.0,
+          "num_false_positives": 117.0,
+          "num_misses": 6993.0,
+          "precision": 0.9100691775557264,
+          "recall": 0.14479638009049775,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 48.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.11647419704077955,
+          "idf1": 0.16995983935742973,
+          "num_switches": 15.0,
+          "num_false_positives": 30.0,
+          "num_misses": 9748.0,
+          "precision": 0.9780380673499268,
+          "recall": 0.12053410321183688,
+          "mostly_tracked": 1.0,
+          "mostly_lost": 37.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.10666666666666669,
+          "idf1": 0.19794140934283452,
+          "num_switches": 2.0,
+          "num_false_positives": 35.0,
+          "num_misses": 3983.0,
+          "precision": 0.9365942028985508,
+          "recall": 0.11488888888888889,
+          "mostly_tracked": 3.0,
+          "mostly_lost": 42.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.3654040404040404,
+          "idf1": 0.3972403776325345,
+          "num_switches": 21.0,
+          "num_false_positives": 40.0,
+          "num_misses": 2452.0,
+          "precision": 0.9741602067183462,
+          "recall": 0.3808080808080808,
+          "mostly_tracked": 6.0,
+          "mostly_lost": 10.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 0,
+          "error_pct": 0.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 50,
+          "error_pct": 78.57142857142857
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 56,
+          "error_pct": 27.272727272727273
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 66,
+          "error_pct": 11.864406779661017
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 27,
+          "error_pct": -38.63636363636363
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 16,
+          "error_pct": -66.66666666666667
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 36,
+          "error_pct": 56.52173913043478
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 39.933333151040266,
+          "count_bias_pct": 9.84675306446019
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 29.893933355481938,
+          "count_bias_pct": -13.18424552778169
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 29.57979399973294,
+          "count_bias_pct": -24.610849900354054
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 40.70875938638334,
+          "count_bias_pct": -40.70875938638334
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 50.79801063588832,
+          "count_bias_pct": -50.79801063588832
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 58.81578614563665,
+          "count_bias_pct": -58.81578614563665
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 65.59028599045969,
+          "count_bias_pct": -65.59028599045969
+        }
+      ]
+    },
+    "coco/sort+cmc": {
+      "overall": {
+        "mota": 0.22886362508067315,
+        "idf1": 0.34782090500973345,
+        "num_switches": 58.0,
+        "num_false_positives": 389.0,
+        "num_misses": 30619.0,
+        "precision": 0.9613166268894192,
+        "recall": 0.23995929106885766,
+        "mostly_tracked": 34.0,
+        "mostly_lost": 165.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 19.851576994434136,
+        "count_bias_pct": -10.667903525046382,
+        "tracker_fps": 3882.4758466912504
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": NaN,
+          "idf1": NaN,
+          "num_switches": 0.0,
+          "num_false_positives": 0.0,
+          "num_misses": 0.0,
+          "precision": NaN,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.2766575840145322,
+          "idf1": 0.40756302521008403,
+          "num_switches": 14.0,
+          "num_false_positives": 49.0,
+          "num_misses": 3919.0,
+          "precision": 0.9700305810397554,
+          "recall": 0.2881017257039055,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 14.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.4688385269121813,
+          "idf1": 0.6115250400829954,
+          "num_switches": 7.0,
+          "num_false_positives": 113.0,
+          "num_misses": 3630.0,
+          "precision": 0.9681061247530341,
+          "recall": 0.48583569405099153,
+          "mostly_tracked": 19.0,
+          "mostly_lost": 16.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.13256695609636782,
+          "idf1": 0.2168700042069836,
+          "num_switches": 15.0,
+          "num_false_positives": 116.0,
+          "num_misses": 6962.0,
+          "precision": 0.912847483095417,
+          "recall": 0.148587501528678,
+          "mostly_tracked": 2.0,
+          "mostly_lost": 47.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.1165644171779141,
+          "idf1": 0.16978555939281986,
+          "num_switches": 15.0,
+          "num_false_positives": 30.0,
+          "num_misses": 9747.0,
+          "precision": 0.978054133138259,
+          "recall": 0.1206243233489715,
+          "mostly_tracked": 1.0,
+          "mostly_lost": 37.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.11066666666666669,
+          "idf1": 0.20590551181102362,
+          "num_switches": 2.0,
+          "num_false_positives": 40.0,
+          "num_misses": 3960.0,
+          "precision": 0.9310344827586207,
+          "recall": 0.12,
+          "mostly_tracked": 3.0,
+          "mostly_lost": 41.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.3820707070707071,
+          "idf1": 0.5205035971223022,
+          "num_switches": 5.0,
+          "num_false_positives": 41.0,
+          "num_misses": 2401.0,
+          "precision": 0.974375,
+          "recall": 0.3936868686868687,
+          "mostly_tracked": 7.0,
+          "mostly_lost": 10.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 0,
+          "error_pct": 0.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 37,
+          "error_pct": 32.142857142857146
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 36,
+          "error_pct": -18.181818181818183
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 59,
+          "error_pct": 0.0
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 27,
+          "error_pct": -38.63636363636363
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 24,
+          "error_pct": -50.0
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 23,
+          "error_pct": 0.0
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 19.851576994434136,
+          "count_bias_pct": -10.667903525046382
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 28.12674744983409,
+          "count_bias_pct": -28.12674744983409
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 34.404792097049175,
+          "count_bias_pct": -34.404792097049175
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 44.4048080476915,
+          "count_bias_pct": -44.4048080476915
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 52.393291342128066,
+          "count_bias_pct": -52.393291342128066
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 59.54781808884872,
+          "count_bias_pct": -59.54781808884872
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 64.727037227432,
+          "count_bias_pct": -64.727037227432
+        }
+      ]
+    },
+    "coco/bytesort": {
+      "overall": {
+        "mota": 0.2945936553641464,
+        "idf1": 0.428118336409411,
+        "num_switches": 99.0,
+        "num_false_positives": 1777.0,
+        "num_misses": 26542.0,
+        "precision": 0.8855099542555248,
+        "recall": 0.34116070098793627,
+        "mostly_tracked": 59.0,
+        "mostly_lost": 138.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 41.89414846128711,
+        "count_bias_pct": 5.3681744353130805,
+        "tracker_fps": 3492.4680620195736
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": NaN,
+          "idf1": NaN,
+          "num_switches": 0.0,
+          "num_false_positives": 0.0,
+          "num_misses": 0.0,
+          "precision": NaN,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.3834695731153497,
+          "idf1": 0.4630225080385852,
+          "num_switches": 17.0,
+          "num_false_positives": 382.0,
+          "num_misses": 2995.0,
+          "precision": 0.867911479944675,
+          "recall": 0.45594913714804725,
+          "mostly_tracked": 7.0,
+          "mostly_lost": 11.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.5274787535410765,
+          "idf1": 0.6533345237032407,
+          "num_switches": 29.0,
+          "num_false_positives": 194.0,
+          "num_misses": 3113.0,
+          "precision": 0.9531514127022458,
+          "recall": 0.5590651558073655,
+          "mostly_tracked": 22.0,
+          "mostly_lost": 15.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.19053442582854352,
+          "idf1": 0.3609560362875087,
+          "num_switches": 29.0,
+          "num_false_positives": 850.0,
+          "num_misses": 5740.0,
+          "precision": 0.7414055369637967,
+          "recall": 0.2980310627369451,
+          "mostly_tracked": 10.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.19316131360519673,
+          "idf1": 0.3066676644466063,
+          "num_switches": 6.0,
+          "num_false_positives": 66.0,
+          "num_misses": 8871.0,
+          "precision": 0.9710399297937692,
+          "recall": 0.19965716347888848,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 33.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.13888888888888884,
+          "idf1": 0.28200852325365944,
+          "num_switches": 0.0,
+          "num_false_positives": 136.0,
+          "num_misses": 3739.0,
+          "precision": 0.8483835005574136,
+          "recall": 0.1691111111111111,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 40.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.4315656565656566,
+          "idf1": 0.4892230576441103,
+          "num_switches": 18.0,
+          "num_false_positives": 149.0,
+          "num_misses": 2084.0,
+          "precision": 0.9264197530864198,
+          "recall": 0.47373737373737373,
+          "mostly_tracked": 10.0,
+          "mostly_lost": 7.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 0,
+          "error_pct": 0.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 44,
+          "error_pct": 57.142857142857146
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 61,
+          "error_pct": 38.63636363636363
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 77,
+          "error_pct": 30.508474576271187
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 18,
+          "error_pct": -59.09090909090909
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 15,
+          "error_pct": -68.75
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 32,
+          "error_pct": 39.130434782608695
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 41.89414846128711,
+          "count_bias_pct": 5.3681744353130805
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 33.077664475048415,
+          "count_bias_pct": -5.288136390752456
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 28.935165879844266,
+          "count_bias_pct": -12.669133775302848
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 30.935883430882903,
+          "count_bias_pct": -21.885306678442795
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 33.24502658972077,
+          "count_bias_pct": -32.00279056487605
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 42.92476788397412,
+          "count_bias_pct": -42.92476788397412
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 48.80443669395139,
+          "count_bias_pct": -48.80443669395139
+        }
+      ]
+    },
+    "coco/bytesort+cmc": {
+      "overall": {
+        "mota": 0.3118204835426699,
+        "idf1": 0.49237068663820255,
+        "num_switches": 30.0,
+        "num_false_positives": 2135.0,
+        "num_misses": 25559.0,
+        "precision": 0.8733839402206144,
+        "recall": 0.3655612371543464,
+        "mostly_tracked": 67.0,
+        "mostly_lost": 134.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 21.242854681900898,
+        "count_bias_pct": -15.276061184841057,
+        "tracker_fps": 2626.4716223869873
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": NaN,
+          "idf1": NaN,
+          "num_switches": 0.0,
+          "num_false_positives": 0.0,
+          "num_misses": 0.0,
+          "precision": NaN,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.4185286103542234,
+          "idf1": 0.5980850070060719,
+          "num_switches": 7.0,
+          "num_false_positives": 374.0,
+          "num_misses": 2820.0,
+          "precision": 0.8777378228179143,
+          "recall": 0.4877384196185286,
+          "mostly_tracked": 10.0,
+          "mostly_lost": 11.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.5593484419263456,
+          "idf1": 0.7148958424126209,
+          "num_switches": 4.0,
+          "num_false_positives": 230.0,
+          "num_misses": 2877.0,
+          "precision": 0.9478812599138908,
+          "recall": 0.5924929178470255,
+          "mostly_tracked": 24.0,
+          "mostly_lost": 15.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.20215237862296687,
+          "idf1": 0.4405763304738902,
+          "num_switches": 7.0,
+          "num_false_positives": 1085.0,
+          "num_misses": 5432.0,
+          "precision": 0.716710182767624,
+          "recall": 0.3356976886388651,
+          "mostly_tracked": 10.0,
+          "mostly_lost": 31.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.19261999278238906,
+          "idf1": 0.30616064076652444,
+          "num_switches": 6.0,
+          "num_false_positives": 67.0,
+          "num_misses": 8876.0,
+          "precision": 0.9705494505494505,
+          "recall": 0.19920606279321545,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 33.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.15733333333333333,
+          "idf1": 0.3092296511627907,
+          "num_switches": 2.0,
+          "num_false_positives": 147.0,
+          "num_misses": 3643.0,
+          "precision": 0.853585657370518,
+          "recall": 0.19044444444444444,
+          "mostly_tracked": 6.0,
+          "mostly_lost": 37.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.4578282828282828,
+          "idf1": 0.597981092773594,
+          "num_switches": 4.0,
+          "num_false_positives": 232.0,
+          "num_misses": 1911.0,
+          "precision": 0.8982902235861464,
+          "recall": 0.5174242424242425,
+          "mostly_tracked": 12.0,
+          "mostly_lost": 7.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 0,
+          "error_pct": 0.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 31,
+          "error_pct": 10.714285714285714
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 36,
+          "error_pct": -18.181818181818183
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 65,
+          "error_pct": 10.169491525423728
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 18,
+          "error_pct": -59.09090909090909
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 30,
+          "error_pct": -37.5
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 20,
+          "error_pct": -13.043478260869565
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 21.242854681900898,
+          "count_bias_pct": -15.276061184841057
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 22.796920067685413,
+          "count_bias_pct": -21.776511904420108
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 26.441525059142702,
+          "count_bias_pct": -26.441525059142702
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 31.04777433851547,
+          "count_bias_pct": -31.04777433851547
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 35.912600620069824,
+          "count_bias_pct": -35.912600620069824
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 41.46634368894606,
+          "count_bias_pct": -41.46634368894606
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 48.91063379193709,
+          "count_bias_pct": -48.91063379193709
+        }
+      ]
+    },
+    "visdrone/iou": {
+      "overall": {
+        "mota": 0.4902943950752122,
+        "idf1": 0.5965768041461609,
+        "num_switches": 359.0,
+        "num_false_positives": 4243.0,
+        "num_misses": 15932.0,
+        "precision": 0.851627793125153,
+        "recall": 0.604527627463635,
+        "mostly_tracked": 130.0,
+        "mostly_lost": 63.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 244.39214152868223,
+        "count_bias_pct": 244.39214152868223,
+        "tracker_fps": 6204.5301791289985
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": -Infinity,
+          "idf1": 0.0,
+          "num_switches": 0.0,
+          "num_false_positives": 3.0,
+          "num_misses": 0.0,
+          "precision": 0.0,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.5874659400544959,
+          "idf1": 0.6462363531890443,
+          "num_switches": 51.0,
+          "num_false_positives": 826.0,
+          "num_misses": 1394.0,
+          "precision": 0.8326919181689285,
+          "recall": 0.7467756584922798,
+          "mostly_tracked": 16.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.603399433427762,
+          "idf1": 0.7085234800529957,
+          "num_switches": 76.0,
+          "num_false_positives": 1095.0,
+          "num_misses": 1629.0,
+          "precision": 0.8322096230462764,
+          "recall": 0.7692634560906516,
+          "mostly_tracked": 32.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.5133912192735722,
+          "idf1": 0.5789739064666583,
+          "num_switches": 153.0,
+          "num_false_positives": 1669.0,
+          "num_misses": 2157.0,
+          "precision": 0.782936662764989,
+          "recall": 0.7362113244466185,
+          "mostly_tracked": 31.0,
+          "mostly_lost": 9.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.22988090941898232,
+          "idf1": 0.3462401389592531,
+          "num_switches": 29.0,
+          "num_false_positives": 78.0,
+          "num_misses": 8429.0,
+          "precision": 0.9714599341383096,
+          "recall": 0.2395344640923854,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.7322222222222222,
+          "idf1": 0.8329794762915782,
+          "num_switches": 13.0,
+          "num_false_positives": 335.0,
+          "num_misses": 857.0,
+          "precision": 0.9157868275515334,
+          "recall": 0.8095555555555556,
+          "mostly_tracked": 31.0,
+          "mostly_lost": 11.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.5606060606060606,
+          "idf1": 0.5511881632043043,
+          "num_switches": 37.0,
+          "num_false_positives": 237.0,
+          "num_misses": 1466.0,
+          "precision": 0.9132186012449652,
+          "recall": 0.6297979797979798,
+          "mostly_tracked": 15.0,
+          "mostly_lost": 5.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 3,
+          "error_pct": 300.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 143,
+          "error_pct": 410.7142857142857
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 180,
+          "error_pct": 309.09090909090907
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 273,
+          "error_pct": 362.7118644067797
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 51,
+          "error_pct": 15.909090909090908
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 56,
+          "error_pct": 16.666666666666668
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 91,
+          "error_pct": 295.6521739130435
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 244.39214152868223,
+          "count_bias_pct": 244.39214152868223
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 106.13392774541316,
+          "count_bias_pct": 93.90449051597594
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 62.12479247074994,
+          "count_bias_pct": 42.91483576079323
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 35.25461668555678,
+          "count_bias_pct": 12.202668633608729
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 24.99602088440387,
+          "count_bias_pct": -2.980169591786605
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 21.353233126840873,
+          "count_bias_pct": -18.292008637044955
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 27.8941842362992,
+          "count_bias_pct": -27.8941842362992
+        }
+      ]
+    },
+    "visdrone/sort": {
+      "overall": {
+        "mota": 0.4820781412897781,
+        "idf1": 0.611771379946107,
+        "num_switches": 293.0,
+        "num_false_positives": 5255.0,
+        "num_misses": 15317.0,
+        "precision": 0.8261315510852303,
+        "recall": 0.6197934766420097,
+        "mostly_tracked": 132.0,
+        "mostly_lost": 59.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 164.30000150391768,
+        "count_bias_pct": 155.85844306235927,
+        "tracker_fps": 1954.5253511240246
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": -Infinity,
+          "idf1": 0.0,
+          "num_switches": 0.0,
+          "num_false_positives": 18.0,
+          "num_misses": 0.0,
+          "precision": 0.0,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.5509536784741145,
+          "idf1": 0.6169934640522876,
+          "num_switches": 38.0,
+          "num_false_positives": 1067.0,
+          "num_misses": 1367.0,
+          "precision": 0.7950048030739674,
+          "recall": 0.7516802906448683,
+          "mostly_tracked": 17.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.5960339943342776,
+          "idf1": 0.7020402278134237,
+          "num_switches": 95.0,
+          "num_false_positives": 1254.0,
+          "num_misses": 1503.0,
+          "precision": 0.8158860666568786,
+          "recall": 0.7871104815864023,
+          "mostly_tracked": 30.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.5097223920753333,
+          "idf1": 0.665897918310372,
+          "num_switches": 72.0,
+          "num_false_positives": 2030.0,
+          "num_misses": 1907.0,
+          "precision": 0.755421686746988,
+          "recall": 0.7667848844319433,
+          "mostly_tracked": 33.0,
+          "mostly_lost": 8.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.2225730783110791,
+          "idf1": 0.34006467840459936,
+          "num_switches": 10.0,
+          "num_false_positives": 177.0,
+          "num_misses": 8430.0,
+          "precision": 0.937477922995408,
+          "recall": 0.23944424395525082,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.7513333333333333,
+          "idf1": 0.8525083999536555,
+          "num_switches": 48.0,
+          "num_false_positives": 351.0,
+          "num_misses": 720.0,
+          "precision": 0.9150326797385621,
+          "recall": 0.84,
+          "mostly_tracked": 32.0,
+          "mostly_lost": 8.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.551010101010101,
+          "idf1": 0.5412311265969802,
+          "num_switches": 30.0,
+          "num_false_positives": 358.0,
+          "num_misses": 1390.0,
+          "precision": 0.8777322404371585,
+          "recall": 0.648989898989899,
+          "mostly_tracked": 15.0,
+          "mostly_lost": 5.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 1,
+          "error_pct": 100.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 123,
+          "error_pct": 339.2857142857143
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 163,
+          "error_pct": 270.45454545454544
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 134,
+          "error_pct": 127.11864406779661
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 31,
+          "error_pct": -29.545454545454547
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 84,
+          "error_pct": 75.0
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 71,
+          "error_pct": 208.69565217391303
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 164.30000150391768,
+          "count_bias_pct": 155.85844306235927
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 109.4969811130723,
+          "count_bias_pct": 95.91473003082119
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 77.09414559017148,
+          "count_bias_pct": 60.373366369392265
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 40.64302565000007,
+          "count_bias_pct": 19.701467208441624
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 27.811847590245318,
+          "count_bias_pct": 3.136522914920641
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 20.043198327096633,
+          "count_bias_pct": -12.90034118423949
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 26.15511418609113,
+          "count_bias_pct": -23.093889696295214
+        }
+      ]
+    },
+    "visdrone/sort+cmc": {
+      "overall": {
+        "mota": 0.5028794122027503,
+        "idf1": 0.6827936012485368,
+        "num_switches": 101.0,
+        "num_false_positives": 5559.0,
+        "num_misses": 14367.0,
+        "precision": 0.8234004701696422,
+        "recall": 0.6433748696817753,
+        "mostly_tracked": 149.0,
+        "mostly_lost": 53.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 88.69302829324938,
+        "count_bias_pct": 80.25146985169093,
+        "tracker_fps": 1501.8421313601702
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": -Infinity,
+          "idf1": 0.0,
+          "num_switches": 0.0,
+          "num_false_positives": 18.0,
+          "num_misses": 0.0,
+          "precision": 0.0,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.5458673932788374,
+          "idf1": 0.7359012163656469,
+          "num_switches": 12.0,
+          "num_false_positives": 1165.0,
+          "num_misses": 1323.0,
+          "precision": 0.7821208154105106,
+          "recall": 0.7596730245231608,
+          "mostly_tracked": 17.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.6344192634560907,
+          "idf1": 0.7959884984921803,
+          "num_switches": 16.0,
+          "num_false_positives": 1352.0,
+          "num_misses": 1213.0,
+          "precision": 0.812196138352549,
+          "recall": 0.8281869688385269,
+          "mostly_tracked": 34.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.525987525987526,
+          "idf1": 0.7167309546769528,
+          "num_switches": 42.0,
+          "num_false_positives": 2036.0,
+          "num_misses": 1798.0,
+          "precision": 0.7580510992275699,
+          "recall": 0.7801149565855449,
+          "mostly_tracked": 36.0,
+          "mostly_lost": 9.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.22130999639119453,
+          "idf1": 0.3411164595157698,
+          "num_switches": 10.0,
+          "num_false_positives": 186.0,
+          "num_misses": 8435.0,
+          "precision": 0.9343915343915344,
+          "recall": 0.23899314326957777,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.8368888888888889,
+          "idf1": 0.8853034793107233,
+          "num_switches": 15.0,
+          "num_false_positives": 415.0,
+          "num_misses": 304.0,
+          "precision": 0.9099978312730427,
+          "recall": 0.9324444444444444,
+          "mostly_tracked": 42.0,
+          "mostly_lost": 1.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.573989898989899,
+          "idf1": 0.7069727648652503,
+          "num_switches": 6.0,
+          "num_false_positives": 387.0,
+          "num_misses": 1294.0,
+          "precision": 0.8732394366197183,
+          "recall": 0.6732323232323232,
+          "mostly_tracked": 15.0,
+          "mostly_lost": 5.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 1,
+          "error_pct": 100.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 70,
+          "error_pct": 150.0
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 85,
+          "error_pct": 93.18181818181819
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 117,
+          "error_pct": 98.30508474576271
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 31,
+          "error_pct": -29.545454545454547
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 74,
+          "error_pct": 54.166666666666664
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 45,
+          "error_pct": 95.65217391304348
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 88.69302829324938,
+          "count_bias_pct": 80.25146985169093
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 56.558462636076065,
+          "count_bias_pct": 42.92209899971243
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 44.31905625518112,
+          "count_bias_pct": 29.383991320116177
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 19.64398223280737,
+          "count_bias_pct": 3.464328553153692
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 15.825170592119745,
+          "count_bias_pct": -7.713790446841295
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 19.949394308537382,
+          "count_bias_pct": -17.908577982006765
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 23.43657785349016,
+          "count_bias_pct": -23.43657785349016
+        }
+      ]
+    },
+    "visdrone/bytesort": {
+      "overall": {
+        "mota": 0.4032666434989822,
+        "idf1": 0.5838575652196564,
+        "num_switches": 295.0,
+        "num_false_positives": 9976.0,
+        "num_misses": 13769.0,
+        "precision": 0.7266325048639465,
+        "recall": 0.658218736037333,
+        "mostly_tracked": 150.0,
+        "mostly_lost": 52.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 167.82930044128594,
+        "count_bias_pct": 162.63449524648072,
+        "tracker_fps": 1573.5555964230507
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": -Infinity,
+          "idf1": 0.0,
+          "num_switches": 0.0,
+          "num_false_positives": 150.0,
+          "num_misses": 0.0,
+          "precision": 0.0,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.4554041780199818,
+          "idf1": 0.5837352966065837,
+          "num_switches": 41.0,
+          "num_false_positives": 1882.0,
+          "num_misses": 1075.0,
+          "precision": 0.7018377693282636,
+          "recall": 0.8047229791099001,
+          "mostly_tracked": 19.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.5647308781869689,
+          "idf1": 0.7008454514710856,
+          "num_switches": 100.0,
+          "num_false_positives": 1819.0,
+          "num_misses": 1154.0,
+          "precision": 0.7645307443365695,
+          "recall": 0.8365439093484419,
+          "mostly_tracked": 35.0,
+          "mostly_lost": 1.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.38131344013696955,
+          "idf1": 0.6191688790160914,
+          "num_switches": 60.0,
+          "num_false_positives": 3551.0,
+          "num_misses": 1448.0,
+          "precision": 0.6545719844357977,
+          "recall": 0.8229179405649993,
+          "mostly_tracked": 41.0,
+          "mostly_lost": 5.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.14074341392998913,
+          "idf1": 0.3078560500232821,
+          "num_switches": 11.0,
+          "num_false_positives": 1189.0,
+          "num_misses": 8324.0,
+          "precision": 0.6989111167384148,
+          "recall": 0.2490075784915193,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.7475555555555555,
+          "idf1": 0.8527930402930403,
+          "num_switches": 50.0,
+          "num_false_positives": 411.0,
+          "num_misses": 675.0,
+          "precision": 0.9029745042492918,
+          "recall": 0.85,
+          "mostly_tracked": 33.0,
+          "mostly_lost": 8.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.4696969696969697,
+          "idf1": 0.5207024740417895,
+          "num_switches": 33.0,
+          "num_false_positives": 974.0,
+          "num_misses": 1093.0,
+          "precision": 0.7464202030721167,
+          "recall": 0.723989898989899,
+          "mostly_tracked": 17.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 1,
+          "error_pct": 100.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 130,
+          "error_pct": 364.2857142857143
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 176,
+          "error_pct": 300.0
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 127,
+          "error_pct": 115.2542372881356
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 36,
+          "error_pct": -18.181818181818183
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 85,
+          "error_pct": 77.08333333333333
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 69,
+          "error_pct": 200.0
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 167.82930044128594,
+          "count_bias_pct": 162.63449524648072
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 132.52386102159764,
+          "count_bias_pct": 123.43295193068853
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 98.33643630293277,
+          "count_bias_pct": 86.81046227695876
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 71.33471044343241,
+          "count_bias_pct": 56.129082737804715
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 59.8518914499544,
+          "count_bias_pct": 40.37137196943492
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 41.05016009887576,
+          "count_bias_pct": 17.186523735239387
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 36.803227521329426,
+          "count_bias_pct": 6.719398920551671
+        }
+      ]
+    },
+    "visdrone/bytesort+cmc": {
+      "overall": {
+        "mota": 0.40306806334706846,
+        "idf1": 0.665326758629299,
+        "num_switches": 95.0,
+        "num_false_positives": 11743.0,
+        "num_misses": 12210.0,
+        "precision": 0.705090534669379,
+        "recall": 0.696917043141538,
+        "mostly_tracked": 169.0,
+        "mostly_lost": 44.0,
+        "num_unique_objects": 246.0,
+        "count_mape_pct": 72.17393070311797,
+        "count_bias_pct": 66.32977485896214,
+        "tracker_fps": 1212.5003589244045
+      },
+      "per_sequence": {
+        "uav0000086_00000_v": {
+          "mota": -Infinity,
+          "idf1": 0.0,
+          "num_switches": 0.0,
+          "num_false_positives": 150.0,
+          "num_misses": 0.0,
+          "precision": 0.0,
+          "recall": NaN,
+          "mostly_tracked": 0.0,
+          "mostly_lost": 0.0,
+          "num_unique_objects": 0.0
+        },
+        "uav0000117_02622_v": {
+          "mota": 0.36257947320617623,
+          "idf1": 0.7008099094807051,
+          "num_switches": 13.0,
+          "num_false_positives": 2540.0,
+          "num_misses": 956.0,
+          "precision": 0.6416984059810975,
+          "recall": 0.8263396911898274,
+          "mostly_tracked": 21.0,
+          "mostly_lost": 3.0,
+          "num_unique_objects": 28.0
+        },
+        "uav0000137_00458_v": {
+          "mota": 0.5760623229461757,
+          "idf1": 0.7936324539444124,
+          "num_switches": 12.0,
+          "num_false_positives": 2220.0,
+          "num_misses": 761.0,
+          "precision": 0.7394060335720155,
+          "recall": 0.8922096317280453,
+          "mostly_tracked": 39.0,
+          "mostly_lost": 1.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000182_00000_v": {
+          "mota": 0.3539195303901186,
+          "idf1": 0.6689419795221843,
+          "num_switches": 42.0,
+          "num_false_positives": 3966.0,
+          "num_misses": 1275.0,
+          "precision": 0.6350754508649246,
+          "recall": 0.8440748440748441,
+          "mostly_tracked": 44.0,
+          "mostly_lost": 5.0,
+          "num_unique_objects": 59.0
+        },
+        "uav0000268_05773_v": {
+          "mota": 0.13948033201010468,
+          "idf1": 0.32508316699933465,
+          "num_switches": 10.0,
+          "num_false_positives": 1195.0,
+          "num_misses": 8333.0,
+          "precision": 0.6971616827166751,
+          "recall": 0.24819559725730783,
+          "mostly_tracked": 5.0,
+          "mostly_lost": 32.0,
+          "num_unique_objects": 44.0
+        },
+        "uav0000305_00000_v": {
+          "mota": 0.836,
+          "idf1": 0.8860457551772742,
+          "num_switches": 15.0,
+          "num_false_positives": 473.0,
+          "num_misses": 250.0,
+          "precision": 0.8998517891170866,
+          "recall": 0.9444444444444444,
+          "mostly_tracked": 42.0,
+          "mostly_lost": 1.0,
+          "num_unique_objects": 48.0
+        },
+        "uav0000339_00001_v": {
+          "mota": 0.5361111111111111,
+          "idf1": 0.7435172088637435,
+          "num_switches": 3.0,
+          "num_false_positives": 1199.0,
+          "num_misses": 635.0,
+          "precision": 0.7349690539345711,
+          "recall": 0.8396464646464646,
+          "mostly_tracked": 18.0,
+          "mostly_lost": 2.0,
+          "num_unique_objects": 23.0
+        }
+      },
+      "counts": {
+        "uav0000086_00000_v": {
+          "gt": 0,
+          "tracker": 1,
+          "error_pct": 100.0
+        },
+        "uav0000117_02622_v": {
+          "gt": 28,
+          "tracker": 58,
+          "error_pct": 107.14285714285714
+        },
+        "uav0000137_00458_v": {
+          "gt": 44,
+          "tracker": 76,
+          "error_pct": 72.72727272727273
+        },
+        "uav0000182_00000_v": {
+          "gt": 59,
+          "tracker": 111,
+          "error_pct": 88.13559322033899
+        },
+        "uav0000268_05773_v": {
+          "gt": 44,
+          "tracker": 35,
+          "error_pct": -20.454545454545453
+        },
+        "uav0000305_00000_v": {
+          "gt": 48,
+          "tracker": 79,
+          "error_pct": 64.58333333333333
+        },
+        "uav0000339_00001_v": {
+          "gt": 23,
+          "tracker": 35,
+          "error_pct": 52.17391304347826
+        }
+      },
+      "count_by_min_len": [
+        {
+          "min_len": 1,
+          "count_mape_pct": 72.17393070311797,
+          "count_bias_pct": 66.32977485896214
+        },
+        {
+          "min_len": 5,
+          "count_mape_pct": 58.882679151918026,
+          "count_bias_pct": 48.49306876230764
+        },
+        {
+          "min_len": 10,
+          "count_mape_pct": 50.03952910969439,
+          "count_bias_pct": 39.649918720083996
+        },
+        {
+          "min_len": 20,
+          "count_mape_pct": 43.109781093384626,
+          "count_bias_pct": 31.421469405072944
+        },
+        {
+          "min_len": 30,
+          "count_mape_pct": 39.32137536464307,
+          "count_bias_pct": 21.572457615725323
+        },
+        {
+          "min_len": 45,
+          "count_mape_pct": 36.71958064394111,
+          "count_bias_pct": 12.801831726192185
+        },
+        {
+          "min_len": 60,
+          "count_mape_pct": 36.21854533332057,
+          "count_bias_pct": 7.917679532454774
+        }
+      ]
+    }
+  }
+}

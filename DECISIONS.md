@@ -45,3 +45,10 @@ A traffic survey reports how many vehicles passed. The count error compares the 
 ## A separate Python environment
 
 Fine-tuning needs the CUDA build of PyTorch. The other projects on this machine pin the CPU build, and their published numbers come from it. This project has its own `.venv`, so neither changes the other.
+
+## Chosen on validation, before test-dev was scored
+
+These were chosen from validation results only (`results/tracking_val.json`) and committed before test-dev was run. The commit history shows the order.
+
+- **Main system: fine-tuned detector + SORT with camera-motion compensation.** On validation it has the best MOTA (0.503) and IDF1 (0.683). ByteSORT's second pass helped with the weak COCO detector, but with the fine-tuned one its low-confidence boxes are mostly clutter: false positives doubled (5,559 → 11,743) and MOTA fell to 0.403.
+- **A vehicle is counted once its track has lasted 30 frames.** Counting every track ID over-counted by 80–244%, because the stronger detector also fires briefly on clutter and each flicker becomes a short track. Across the lengths tried (1, 5, 10, 20, 30, 45, 60 frames), 30 gave the lowest validation count error for the main system: 15.8%, against 88.7% when counting every ID. The same 30 is applied to every tracker on test-dev.

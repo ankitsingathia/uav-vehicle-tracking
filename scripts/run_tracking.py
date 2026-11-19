@@ -25,6 +25,9 @@ from uavtrack import evaluate, trackers  # noqa: E402
 from uavtrack.visdrone import mot_split  # noqa: E402
 from cache_detections import split_root  # noqa: E402
 
+MIN_LENS = (1, 5, 10, 20, 30, 45, 60)  # frames a track must last to be counted; chosen on val only
+COUNT_MIN_LEN = 30  # chosen on validation for the main system (DECISIONS.md); applied unchanged to test-dev
+
 TRACKERS = {
     "iou": lambda: trackers.IoUTracker(high=0.5, iou=0.3, min_hits=3),
     "sort": lambda: trackers.SORT(high=0.5, iou=0.3, max_age=10, min_hits=3),
@@ -64,11 +67,13 @@ def main(split: str):
                 secs += dt
             r = evaluate.summarise(seqs, hyps)
             r["overall"]["tracker_fps"] = n_frames / secs
+            r["count_by_min_len"] = [evaluate.count_error(seqs, hyps, L) for L in MIN_LENS]
             res["results"][f"{detector}/{name}"] = r
             o = r["overall"]
             print(f"{detector:8s} {name:13s} MOTA {o['mota']:6.3f}  IDF1 {o['idf1']:.3f}  IDsw {int(o['num_switches']):5d}  "
                   f"FP {int(o['num_false_positives']):6d}  FN {int(o['num_misses']):6d}  "
-                  f"count error {o['count_mape_pct']:5.1f}% (bias {o['count_bias_pct']:+.1f}%)  {o['tracker_fps']:.0f} fps")
+                  f"count error, every ID {o['count_mape_pct']:5.1f}%, tracks >= {COUNT_MIN_LEN} frames "
+                  f"{r['count_by_min_len'][MIN_LENS.index(COUNT_MIN_LEN)]['count_mape_pct']:5.1f}%  {o['tracker_fps']:.0f} fps")
     (ROOT / "results").mkdir(exist_ok=True)
     (ROOT / f"results/tracking_{split}.json").write_text(json.dumps(res, indent=2))
 

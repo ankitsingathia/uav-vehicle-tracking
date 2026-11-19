@@ -52,6 +52,21 @@ def drop_ignored(seq: Sequence, hyp: np.ndarray) -> np.ndarray:
     return hyp[keep]
 
 
+def count_error(seqs: list[Sequence], hyps: dict[str, np.ndarray], min_len: int) -> dict:
+    """Count only tracks seen in at least `min_len` frames, as a counting
+    system would: a vehicle is real once it has been followed long enough.
+    Short tracks are mostly false boxes that flickered for a few frames."""
+    errs = []
+    for s in seqs:
+        h = drop_ignored(s, hyps[s.name])
+        ids, n = np.unique(h[:, 1], return_counts=True) if len(h) else (np.array([]), np.array([]))
+        pred = int((n >= min_len).sum())
+        gt = len(np.unique(s.gt[:, 1]))
+        errs.append(100.0 * (pred - gt) / max(gt, 1))
+    errs = np.array(errs)
+    return {"min_len": min_len, "count_mape_pct": float(np.mean(np.abs(errs))), "count_bias_pct": float(np.mean(errs))}
+
+
 def summarise(seqs: list[Sequence], hyps: dict[str, np.ndarray]) -> dict:
     hyps = {s.name: drop_ignored(s, hyps[s.name]) for s in seqs}
     accs = [accumulate(s, hyps[s.name]) for s in seqs]
