@@ -31,7 +31,7 @@ from uavtrack.visdrone import mot_split  # noqa: E402
 from cache_detections import IMGSZ, split_root  # noqa: E402
 from run_tracking import TRACKERS, track  # noqa: E402
 
-CALIB, TIMING_FRAMES, TRACKER = 64, 100, "bytesort+cmc"
+CALIB, TIMING_FRAMES, TRACKER = 64, 100, "sort+cmc"  # the main system chosen on val
 
 
 def export_fp32() -> Path:
@@ -129,7 +129,8 @@ def main():
             "file_mb": round(path.stat().st_size / 2**20, 2),
             "latency_ms_1_thread": round(time_cpu(path, 1), 1),
             "latency_ms_all_threads": round(time_cpu(path, os.cpu_count() or 4), 1),
-            "mota": o["mota"], "idf1": o["idf1"], "count_mape_pct": o["count_mape_pct"],
+            "mota": o["mota"], "idf1": o["idf1"],
+            "count_mape_pct_30f": evaluate.count_error(seqs, hyps, 30)["count_mape_pct"],
         }
         print(name, res["models"][name])
     (ROOT / "results/edge.json").write_text(json.dumps(res, indent=2))

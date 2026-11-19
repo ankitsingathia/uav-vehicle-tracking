@@ -1,4 +1,4 @@
-"""Side-by-side picture: IoU tracker vs ByteSORT + camera-motion compensation.
+"""Side-by-side picture: IoU tracker vs SORT + camera-motion compensation (the main system).
 
 The sequence is the validation sequence with the largest camera motion (95th
 percentile shift), and the frame is the one where the camera moved most
@@ -65,10 +65,10 @@ def main(detector: str = "visdrone"):
     dets = np.load(ROOT / "data/detections" / detector / "val" / f"{name}.npy")
     warps = np.load(ROOT / "data/warps/val" / f"{name}.npz")["warps"]
     a, _ = track(s, dets, None, TRACKERS["iou"])
-    b, _ = track(s, dets, warps, TRACKERS["bytesort+cmc"])
+    b, _ = track(s, dets, warps, TRACKERS["sort+cmc"])
     img = cv2.imread(str(s.frames[frame - 1]))
     left = draw(img, a, frame, f"IoU tracker: {int((a[:, 0] == frame).sum())} vehicles tracked in this frame")
-    right = draw(img, b, frame, f"ByteSORT + camera motion: {int((b[:, 0] == frame).sum())} tracked")
+    right = draw(img, b, frame, f"SORT + camera motion: {int((b[:, 0] == frame).sum())} tracked")
     gt_n = len(np.unique(s.gt[:, 1]))
     both = np.hstack([left, np.full((img.shape[0], 12, 3), 255, np.uint8), right])
     scale = 1800 / both.shape[1]
