@@ -1,0 +1,6 @@
+numpy
+scipy
+pandas
+motmetrics
+opencv-python-headless
+pytest
